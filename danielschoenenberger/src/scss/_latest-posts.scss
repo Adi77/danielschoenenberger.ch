@@ -1,5 +1,8 @@
 .wp-block-latest-posts {
   margin: auto 5%;
+  @include media($until: 'sm') {
+    margin: 0 0 0 5%;
+  }
   .wp-block-latest-posts__featured-image {
     a {
       overflow: hidden;

@@ -326,7 +326,12 @@
               ><a href="{{ post.author.path }}"> {{ post.author.name }} </a
               ><span>&bull;</span> #}
             </p>
-            <img src="{{ post.thumbnail.src|resize(1200, 300) }}" />
+            <img
+              src="{{ post.thumbnail.src|resize(1200, 300) }}"
+              srcset="{{ post.thumbnail.srcset }}"
+              sizes="{{ post.thumbnail.img_sizes }}"
+            />
+
             <div class="article-body">
               {{ post.content }}
             </div>

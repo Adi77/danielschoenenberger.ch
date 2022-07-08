@@ -3,7 +3,10 @@ footer {
   background-color: $main-color;
   padding: toRem(80);
   @include media($until: 'sm') {
-    padding: toRem(40);
+    padding: toRem(80) toRem(20);
+  }
+  @include media($from: 'sm', $until: 'lg') {
+    padding: toRem(80) toRem(30);
   }
   font-size: toRem(25);
   margin-top: toRem(100);

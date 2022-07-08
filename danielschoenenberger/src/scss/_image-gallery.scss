@@ -1,6 +1,9 @@
 .wp-block-gallery {
   margin: auto 5%;
   .wp-block-image {
+    @include media($until: 'sm') {
+      width: 100% !important;
+    }
     a {
       overflow: hidden;
       img {
