@@ -196,8 +196,8 @@ class StarterSite extends Timber\Site
      */
     public function add_to_twig($twig)
     {
-        $twig->addExtension(new Twig\Extension\StringLoaderExtension());
-        $twig->addFilter(new Twig\TwigFilter('myfoo', array( $this, 'myfoo' )));
+        //$twig->addExtension(new Twig\Extension\StringLoaderExtension());
+        //$twig->addFilter(new Twig\TwigFilter('myfoo', array( $this, 'myfoo' )));
         return $twig;
     }
 }

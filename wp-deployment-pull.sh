@@ -8,10 +8,10 @@ wpContentFolderLocationLocal=www/wp-content
 migrationDbDumpFolderLocationLocal=www
 
 # remote
-prodServerSsh=monikazi@wink.ch
-serverRootRemote=/home/monikazi
-domainNameProduction=https://www.wink.ch/staging2
-webRootRelativeRemote=www/www.wink.ch/staging2
+prodServerSsh=bopabomy@s101.cyon.net
+serverRootRemote=/home/bopabomy
+domainNameProduction=http://bopabomy.cyon.site
+webRootRelativeRemote=public_html/bopabomy.cyon.site
 migrationDbDumpFolderLocationRemote=${serverRootRemote}/${webRootRelativeRemote}/migration
 
 wp-files_sync_plugins() {
