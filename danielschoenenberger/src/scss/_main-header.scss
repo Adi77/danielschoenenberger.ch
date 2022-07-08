@@ -6,12 +6,22 @@
   height: 100vh;
   max-width: 100%;
   width: 100%;
-
+  margin-bottom: 100px;
   svg {
     width: 40vw;
     margin: auto;
     display: block;
     padding-top: 10vh;
+  }
+}
+
+.single-post .image-header {
+  height: 30vh;
+  svg {
+    width: 20vw;
+    margin: auto;
+    display: block;
+    padding-top: 4vh;
   }
 }
 
@@ -21,32 +31,12 @@
   }
 }
 
-#main-header {
-  background-color: transparent;
-  box-shadow: none;
-  &.et-fixed-header {
-    box-shadow: none !important;
-  }
-}
-
 header {
   //mix-blend-mode: difference;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  top: 4%;
+  left: 3%;
+  //right: 0;
   z-index: 100;
   background-color: transparent;
-}
-
-.logged-in {
-  header {
-    z-index: 1;
-  }
-}
-
-.dark-mode {
-  header {
-    // background-color: $wink-black;
-  }
 }

@@ -14,9 +14,26 @@
 {# 					<h1 class="hdr-logo" role="banner">
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1> #}
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'items': menu.get_items} %}
-					</nav><!-- #nav -->
+					<nav class="navbar navbar-dark bg-transparent">
+						<div class="container-fluid">
+						  <button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						  >
+							<span class="navbar-toggler-icon"></span>
+						  </button>
+						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  
+							{% include "menu.twig" with {'items': menu.get_items} %}
+					  
+						  </div>
+						</div>
+					  </nav>
 				</div>
 			{% endblock %}
 		</header>

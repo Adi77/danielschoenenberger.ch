@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-  background-color: $wink-beige;
+  background-color: white;
   color: $wink-black;
   margin: 0;
 }
@@ -9,10 +9,13 @@ body {
 /* a-tag href content */
 
 a {
-  color: $wink-black;
-  border-bottom: 1px solid $wink-darkgreen;
+  color: $main-color;
+  text-decoration: none;
+
   &:hover {
-    border-bottom: 0;
+    color: $main-color;
+
+    border-bottom: 1px solid $main-color;
   }
 }
 
@@ -59,40 +62,37 @@ h1,
 h2,
 h3,
 h4 {
-  color: $wink-black;
+  color: $main-color;
 }
 
+h1,
+h2 {
+  font-size: 3.125rem;
+  font-weight: 700;
+}
 h1 {
-  font-size: 100px;
-  @include breakpoint(980) {
-    font-size: 40px;
-  }
+  margin-bottom: toRem(40);
 }
 h2 {
-  font-size: 65px;
-  @include breakpoint(980) {
-    font-size: 35px;
+  margin-top: toRem(40);
+  margin-bottom: toRem(30);
+}
+
+/* Zitat */
+blockquote {
+  p {
+    font-size: toRem(30);
+    color: $main-color-light;
+    margin-bottom: toRem(40);
   }
-}
-h3 {
-  font-size: 40px;
-}
-.et_pb_column h4 {
-  font-size: 25px;
-}
-h5 {
-  font-size: 20px;
 }
 
 /* paragraph */
 
 p {
-  font-size: 40px;
-  font-weight: $wink-light;
-  line-height: 1.4;
-  @include breakpoint(1405) {
-    font-size: 20px;
-  }
+  font-size: toRem(20);
+  color: $main-color;
+  margin-bottom: toRem(20);
 }
 
 /* Table font-sizes */
@@ -108,7 +108,7 @@ table {
   }
 }
 
-/* lists style */
+/* lists style 
 
 ul {
   list-style-type: none !important;
@@ -129,3 +129,4 @@ ul {
     }
   }
 }
+*/

@@ -4,12 +4,8 @@
     url('../fonts/CabinetGrotesk-Extrabold.woff') format('woff');
 } 
 
-
-
-h1 {
-  font-family: $wink-CabinetGroteskLight;
-  strong {
-    font-family: $wink-CabinetGroteskExtrabold;
-  }
-}
 */
+
+body {
+  font-family: 'Noticia Text', serif;
+}

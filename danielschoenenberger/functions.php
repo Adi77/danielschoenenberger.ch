@@ -174,6 +174,10 @@ class StarterSite extends Timber\Site
         );
 
         add_theme_support('menus');
+
+        /* Enable ci styles in Backend */
+        add_theme_support('editor-styles');
+        add_editor_style('dist/site.css');
     }
 
     /** This Would return 'foo bar!'.
@@ -201,8 +205,7 @@ class StarterSite extends Timber\Site
 new StarterSite();
 
 
-add_theme_support('editor-styles');
-add_editor_style('dist/site.css');
+
 
 
 // Remove Block vorlagen

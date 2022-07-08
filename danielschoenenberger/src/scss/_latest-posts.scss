@@ -1,0 +1,36 @@
+.wp-block-latest-posts {
+  margin: auto 5%;
+  .wp-block-latest-posts__featured-image {
+    a {
+      overflow: hidden;
+      &:hover {
+        border: 0;
+        img {
+          //opacity: 0.8;
+          transform: scale(1.1);
+        }
+      }
+      img {
+        transition: transform 0.2s;
+      }
+    }
+  }
+  .wp-block-latest-posts__post-title {
+    display: block;
+    margin-top: toRem(25);
+    padding-bottom: toRem(20);
+    font-size: toRem(26);
+    &:hover {
+      border: 0;
+    }
+  }
+  .wp-block-latest-posts__post-excerpt {
+    margin-bottom: toRem(40);
+  }
+}
+
+.page-id-42 {
+  footer {
+    margin-top: toRem(30);
+  }
+}

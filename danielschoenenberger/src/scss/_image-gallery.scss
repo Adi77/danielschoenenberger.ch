@@ -1,0 +1,16 @@
+.wp-block-gallery {
+  margin: auto 5%;
+  .wp-block-image {
+    a {
+      overflow: hidden;
+      img {
+        transition: transform 0.2s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

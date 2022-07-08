@@ -92,6 +92,11 @@ $breakpoints: (
   }
 } */
 
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
 @mixin winkButton() {
   .et_pb_button,
   .button {
