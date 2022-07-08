@@ -67,7 +67,10 @@ h4 {
 
 h1,
 h2 {
-  font-size: 3.125rem;
+  font-size: toRem(50);
+  @include media($until: 'sm') {
+    font-size: toRem(35);
+  }
   font-weight: 700;
 }
 h1 {
@@ -82,6 +85,9 @@ h2 {
 blockquote {
   p {
     font-size: toRem(30);
+    @include media($until: 'sm') {
+      font-size: toRem(25);
+    }
     color: $main-color-light;
     margin-bottom: toRem(40);
   }
@@ -95,7 +101,7 @@ p {
   margin-bottom: toRem(20);
 }
 
-/* Table font-sizes */
+/* Table font-sizes 
 
 table {
   tr {
@@ -106,7 +112,7 @@ table {
       }
     }
   }
-}
+}*/
 
 /* lists style 
 

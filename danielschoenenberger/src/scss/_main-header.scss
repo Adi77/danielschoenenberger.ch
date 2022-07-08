@@ -4,6 +4,9 @@
   position: relative;
   opacity: 1;
   height: 100vh;
+  @include media($until: 'sm') {
+    height: 60vh;
+  }
   max-width: 100%;
   width: 100%;
   margin-bottom: 100px;
@@ -17,11 +20,8 @@
 
 .single-post .image-header {
   height: 30vh;
-  svg {
-    width: 20vw;
-    margin: auto;
-    display: block;
-    padding-top: 4vh;
+  @include media($until: 'sm') {
+    height: 60vh;
   }
 }
 
