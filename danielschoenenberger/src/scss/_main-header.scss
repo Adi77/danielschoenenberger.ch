@@ -18,10 +18,15 @@
   }
 }
 
-.single-post .image-header {
-  height: 30vh;
-  @include media($until: 'sm') {
-    height: 60vh;
+.single-post {
+  .image-header {
+    height: toRem(300);
+    /*     @include media($until: 'sm') {
+      height: 60vh;
+    } */
+    svg {
+      width: toRem(250);
+    }
   }
 }
 
