@@ -59,14 +59,8 @@ input[type='checkbox']:checked + label::after {
 /* headings  */
 
 h1,
-h2,
-h3,
-h4 {
-  color: $main-color;
-}
-
-h1,
 h2 {
+  color: $main-color;
   font-size: toRem(50);
   @include media($until: 'sm') {
     font-size: toRem(35);
@@ -79,6 +73,14 @@ h1 {
 h2 {
   margin-top: toRem(40);
   margin-bottom: toRem(30);
+}
+h3 {
+  color: $main-color-light;
+  margin-bottom: toRem(30);
+}
+h4 {
+  font-size: 1.75rem;
+  color: $main-color;
 }
 
 /* Zitat */

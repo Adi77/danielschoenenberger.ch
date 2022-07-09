@@ -29,6 +29,15 @@ $wink-SwitzerBold: SwitzerBold;
 $wink-tag-border-size: 2px solid;
 $wink-horizontal-border-size: 3px solid;
 
+/* container max widths */
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px,
+);
+
 /* Theme colors */
 $main-color: #536657;
 $main-color-light: #7b9a62;

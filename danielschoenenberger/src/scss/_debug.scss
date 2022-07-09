@@ -27,6 +27,11 @@ body {
       background-color: darkslategrey;
       color: white;
     }
+    @media only screen and (min-width: 1400px) {
+      content: 'Desktop xxxl > 1400px';
+      background-color: rgb(75, 47, 79);
+      color: white;
+    }
     position: fixed;
     padding: 5px 10px;
     right: 0;
