@@ -1,0 +1,20 @@
+.c-accordion__title {
+  padding-left: toRem(20);
+  @include media($until: 'sm') {
+    font-size: toRem(20);
+    font-weight: 700;
+  }
+
+  &:after {
+    color: $main-color;
+    content: '+';
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+}
+.c-accordion__content {
+  padding-left: toRem(20);
+}
