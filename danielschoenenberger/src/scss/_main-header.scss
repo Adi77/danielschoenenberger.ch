@@ -12,6 +12,9 @@
   margin-bottom: 100px;
   svg {
     width: 40vw;
+    @include media($until: 'sm') {
+      width: 70vw;
+    }
     margin: auto;
     display: block;
     padding-top: 10vh;

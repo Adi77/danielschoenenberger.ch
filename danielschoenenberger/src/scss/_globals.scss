@@ -2,7 +2,6 @@
 
 body {
   background-color: white;
-  color: $wink-black;
   margin: 0;
 }
 
@@ -20,39 +19,6 @@ a {
 }
 
 /* form input */
-input[type='radio'],
-input[type='checkbox'] {
-  position: absolute;
-  left: -999em;
-}
-
-input[type='checkbox'] + label {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-input[type='checkbox'] + label::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: 30px;
-  background-color: white;
-  border-radius: 0;
-  margin-right: 10px;
-}
-input[type='checkbox']:checked + label::after {
-  content: '';
-  position: absolute;
-  width: 1ex;
-  height: 0.5ex;
-  top: 10px;
-  left: 9px;
-  border: 3px solid $wink-green;
-  border-top: none;
-  border-right: none;
-  transform: rotate(-45deg);
-}
 
 /* text formatting */
 
@@ -102,39 +68,3 @@ p {
   color: $main-color;
   margin-bottom: toRem(20);
 }
-
-/* Table font-sizes 
-
-table {
-  tr {
-    th {
-      font-size: 45px;
-      @include breakpoint(1405) {
-        font-size: 30px;
-      }
-    }
-  }
-}*/
-
-/* lists style 
-
-ul {
-  list-style-type: none !important;
-  li {
-    font-size: 30px;
-    line-height: 1.4;
-    font-weight: $wink-light;
-    @include breakpoint(1580) {
-      font-size: 26px;
-    }
-    @include breakpoint(1100) {
-      font-size: 20px;
-    }
-    &:before {
-      content: '-';
-      position: absolute;
-      margin-left: -11px;
-    }
-  }
-}
-*/

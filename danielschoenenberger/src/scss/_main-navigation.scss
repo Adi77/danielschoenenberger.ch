@@ -5,7 +5,7 @@
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0.9);
   &.collapsing {
-    left: -35%;
+    left: -85%;
     transition: width 0s ease-in-out;
     height: auto;
   }
@@ -38,6 +38,9 @@
 .navbar-dark {
   .navbar-toggler {
     padding: 20px;
+    @include media($until: 'sm') {
+      padding: 10px;
+    }
     font-size: 20px;
     line-height: 1;
     background-color: $main-color;
