@@ -1,7 +1,7 @@
 footer {
   color: white;
   background-color: $main-color;
-  padding: toRem(80);
+  padding: toRem(40) toRem(80);
   @include media($until: 'sm') {
     padding: toRem(80) toRem(20);
   }

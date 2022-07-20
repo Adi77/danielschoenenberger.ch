@@ -4,8 +4,8 @@ source .env
 set +o allexport
 
 # local
-wpContentFolderLocationLocal=www/wp-content
 migrationDbDumpFolderLocationLocal=www
+wpContentFolderLocationLocal=www/wp-content
 
 # remote
 prodServerSsh=bopabomy@s101.cyon.net
@@ -13,6 +13,8 @@ serverRootRemote=/home/bopabomy
 domainNameProduction=http://bopabomy.cyon.site
 webRootRelativeRemote=public_html/bopabomy.cyon.site
 migrationDbDumpFolderLocationRemote=${serverRootRemote}/${webRootRelativeRemote}/migration
+
+#wpCliCommand=php ${serverRootRemote}/bin/wp
 
 wp-files_sync_plugins() {
 
@@ -101,7 +103,7 @@ wp-files_sync() {
 wp-database_sync() {
     echo "******* Do you wish to export db-dump to ${migrationDbDumpFolderLocationRemote}/$DB_NAME.sql.gz File and download it?"
     SCRIPT="cd ${migrationDbDumpFolderLocationRemote}
-            php ${serverRootRemote}/wp-cli.phar db export --add-drop-table - | gzip >${migrationDbDumpFolderLocationRemote}/$DB_NAME.sql.gz"
+            php ${serverRootRemote}/bin/wp db export --add-drop-table - | gzip >${migrationDbDumpFolderLocationRemote}/$DB_NAME.sql.gz"
     select yn in "Yes" "No"; do
         case $yn in
         Yes)
