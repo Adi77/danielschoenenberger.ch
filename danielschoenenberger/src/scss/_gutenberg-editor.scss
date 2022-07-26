@@ -2,3 +2,9 @@
   //margin: 0 !important;
   overflow: hidden;
 }
+
+@media (min-width: 782px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: inherit;
+  }
+}
