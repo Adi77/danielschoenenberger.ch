@@ -10,9 +10,9 @@ wpContentFolderLocationLocal=www/wp-content
 # remote
 prodServerSsh=bopabomy@s101.cyon.net
 serverRootRemote=/home/bopabomy
-webRootRelativeRemote=public_html/bopabomy.cyon.site
+webRootRelativeRemote=public_html/danielschoenenberger.ch
 migrationDbDumpFolderLocationRemote=${serverRootRemote}/${webRootRelativeRemote}/migration
-domainNameProduction=http://bopabomy.cyon.site
+domainNameProduction=https://danielschoenenberger.ch
 repoLocationRemote=dschoene-git-repo/danielschoenenberger.ch
 repoThemeLocationRemote=${repoLocationRemote}/$WP_THEME
 

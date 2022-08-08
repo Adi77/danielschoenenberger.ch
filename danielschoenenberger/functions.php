@@ -237,7 +237,7 @@ function danielschoenenberger_widgets_init()
             'after_title'   => '</h2>',
         )
     );
- 
+
     register_sidebar(
         array(
             'name'          => __('Footer 2', 'danielschoenenberger'),
@@ -257,7 +257,7 @@ function extend_editor_caps()
 {
     // gets the editor role
     $roleObject = get_role('editor');
-    
+
     if (!$roleObject->has_cap('edit_theme_options')) {
         $roleObject->add_cap('edit_theme_options');
     }

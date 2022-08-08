@@ -39,7 +39,7 @@ module.exports = merge(
         },
       ],
     },
-    cache: { type: 'filesystem' },
+    //cache: { type: 'filesystem' },
     plugins: [
       new webpack.ProvidePlugin({
         $: 'jquery',
@@ -47,7 +47,7 @@ module.exports = merge(
       }),
       new PurgeCSSPlugin({
         paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-        //only: ['scss'],
+        only: ['scss'],
       }),
     ],
   },
