@@ -1,7 +1,13 @@
-/* eslint-disable no-undef */
 const webpack = require('webpack');
 const path = require('path');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
+
+const glob = require('glob');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
+
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+};
 
 const modeConfig =
   process.env.NODE_ENV === 'production'
@@ -19,6 +25,11 @@ module.exports = merge(
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist/'),
     },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all',
+    //   },
+    // },
     module: {
       rules: [
         {
@@ -26,20 +37,17 @@ module.exports = merge(
           exclude: /node_modules/,
           use: ['babel-loader'],
         },
-        {
-          test: /\.(png|svg|jpg|jpeg|gif)$/, // images
-          use: ['file-loader'],
-        },
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/, // fonts
-          use: ['file-loader'],
-        },
       ],
     },
+    cache: { type: 'filesystem' },
     plugins: [
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
+      }),
+      new PurgeCSSPlugin({
+        paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+        //only: ['scss'],
       }),
     ],
   },

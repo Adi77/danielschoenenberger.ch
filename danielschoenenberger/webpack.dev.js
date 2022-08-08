@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
   output: {
-    publicPath: 'http://danielschoenenberger.ch.local:8080/',
+    publicPath: 'http://dieprojektfabrik.ch.local:8080/',
   },
   module: {
     rules: [
@@ -11,9 +11,6 @@ module.exports = {
         use: [
           {
             loader: 'style-loader',
-            options: {
-              sourceMap: true,
-            },
           },
           {
             loader: 'css-loader',
@@ -48,13 +45,11 @@ module.exports = {
     },
     compress: true,
     hot: true,
-    inline: true,
-    stats: 'errors-only',
-    overlay: true,
-    disableHostCheck: true,
+    allowedHosts: 'all',
+    client: {
+      logging: 'info',
+    },
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
