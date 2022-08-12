@@ -113,9 +113,6 @@ class StarterSite extends Timber\Site
      */
     public function add_to_context($context)
     {
-        $context['foo']   = 'bar';
-        $context['stuff'] = 'I am a value set in your functions.php file';
-        $context['notes'] = 'These values are available everytime you call Timber::context();';
         $context['footerwidgetcol1'] = Timber::get_widgets('footerwidgetcol1');
         $context['footerwidgetcol2'] = Timber::get_widgets('footerwidgetcol2');
         $context['menu']  = new Timber\Menu();

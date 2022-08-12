@@ -27,22 +27,33 @@ a {
 h1,
 h2 {
   color: $main-color;
+  font-weight: 700;
+}
+h1 {
   font-size: toRem(50);
   @include media($until: 'sm') {
     font-size: toRem(35);
   }
-  font-weight: 700;
-}
-h1 {
   margin-bottom: toRem(40);
+  line-height: 60px;
 }
 h2 {
+  font-size: toRem(40);
+  @include media($until: 'sm') {
+    font-size: toRem(30);
+  }
   margin-top: toRem(40);
   margin-bottom: toRem(30);
+  line-height: 55px;
 }
 h3 {
+  font-size: toRem(30);
+  @include media($until: 'sm') {
+    font-size: toRem(25);
+  }
   color: $main-color-light;
   margin-bottom: toRem(30);
+  line-height: 45px;
 }
 h4 {
   font-size: 1.75rem;
@@ -64,7 +75,8 @@ blockquote {
 /* paragraph */
 
 p {
-  font-size: toRem(20);
+  font-size: toRem(22);
   color: $main-color;
   margin-bottom: toRem(20);
+  line-height: 32px;
 }
