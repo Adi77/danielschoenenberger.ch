@@ -29,7 +29,8 @@ h2 {
   color: $main-color;
   font-weight: 700;
 }
-h1 {
+h1,
+.has-h-1-font-size {
   font-size: toRem(50);
   @include media($until: 'sm') {
     font-size: toRem(35);
@@ -37,7 +38,8 @@ h1 {
   margin-bottom: toRem(40);
   line-height: 60px;
 }
-h2 {
+h2,
+.has-h-2-font-size {
   font-size: toRem(40);
   @include media($until: 'sm') {
     font-size: toRem(30);
@@ -46,7 +48,8 @@ h2 {
   margin-bottom: toRem(30);
   line-height: 55px;
 }
-h3 {
+h3,
+.has-h-3-font-size {
   font-size: toRem(30);
   @include media($until: 'sm') {
     font-size: toRem(25);
@@ -74,9 +77,30 @@ blockquote {
 
 /* paragraph */
 
-p {
+p,
+.has-p-font-size {
   font-size: toRem(22);
   color: $main-color;
   margin-bottom: toRem(20);
   line-height: 32px;
+}
+
+.has-cd-1-hellgruen-color {
+  color: #7b9a62;
+}
+
+.has-cd-3-dunkelgruen-color {
+  color: #536657;
+}
+
+.has-p-1-hellgruen-color {
+  color: #94b277;
+}
+
+.has-p-2-mittelgruen-color {
+  color: #708456;
+}
+
+.has-p-3-dunkelgruen-color {
+  color: #477b6a;
 }

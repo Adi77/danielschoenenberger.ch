@@ -177,6 +177,75 @@ class StarterSite extends Timber\Site
         /* Enable ci styles in Backend */
         add_theme_support('editor-styles');
         add_editor_style('dist/site.css');
+
+
+
+
+        /* disable standard gutenberg block editor colors */
+        add_theme_support('disable-custom-colors');
+        /* add own theme colors */
+        add_theme_support(
+            'editor-color-palette',
+            array(
+                array(
+                    'name'  => esc_html__('CD-1 Hellgrün', 'danielschoenenberger'),
+                    'slug'  => 'cd-1-hellgruen',
+                    'color' => '#7b9a62',
+                ),
+                array(
+                    'name'  => esc_html__('CD-3 Dunkelgrün', 'danielschoenenberger'),
+                    'slug'  => 'cd-3-dunkelgruen',
+                    'color' => '#536657',
+                ),
+                array(
+                    'name'  => esc_html__('P-1 Hellgrün', 'danielschoenenberger'),
+                    'slug'  => 'p-1-hellgruen',
+                    'color' => '#94b277',
+                ),
+                array(
+                    'name'  => esc_html__('P-2 Mittelgrün', 'danielschoenenberger'),
+                    'slug'  => 'p-2-mittelgruen',
+                    'color' => '#708456',
+                ),
+                array(
+                    'name'  => esc_html__('P-3 Dunkelgrün', 'danielschoenenberger'),
+                    'slug'  => 'p-3-dunkelgruen',
+                    'color' => '#477b6a',
+                ),
+            )
+        );
+
+
+        add_theme_support('disable-custom-font-sizes');
+        add_theme_support(
+            'editor-font-sizes',
+            array(
+                array(
+                    'name'      => __('H1', 'danielschoenenberger'),
+                    'shortName' => __('H1', 'danielschoenenberger'),
+                    'size'      => 50,
+                    'slug'      => 'h1'
+                ),
+                array(
+                    'name'      => __('H2', 'danielschoenenberger'),
+                    'shortName' => __('H2', 'danielschoenenberger'),
+                    'size'      => 40,
+                    'slug'      => 'h2'
+                ),
+                array(
+                    'name'      => __('H3', 'danielschoenenberger'),
+                    'shortName' => __('H3', 'danielschoenenberger'),
+                    'size'      => 30,
+                    'slug'      => 'h2'
+                ),
+                array(
+                    'name'      => __('P', 'danielschoenenberger'),
+                    'shortName' => __('P', 'danielschoenenberger'),
+                    'size'      => 22,
+                    'slug'      => 'p'
+                ),
+            )
+        );
     }
 
     /** This Would return 'foo bar!'.
